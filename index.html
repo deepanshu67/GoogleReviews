@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>TO TRACK SUBMIT BUTTON</title>
+</head>
+<body>
+<iframe id="Track" src="https://docs.google.com/forms/d/e/1FAIpQLSc3HOrJDAyAjh2UZFuEICUGh3VvqG7mn5aQVXF5caqnIDAiTA/viewform?embedded=true" width="640" height="986" frameborder="0" marginheight="0" marginwidth="0">Loading…"></iframe>
+	<script>
+		// Get a reference to the iframe by its ID or any other means
+var iframe = document.getElementById('Track');
+
+// Add an event listener to the iframe's content window
+iframe.addEventListener('load', function () {
+  // Access the Google Form inside the iframe
+  var googleForm = iframe.contentWindow.document.forms[0]; // Change the index if you have multiple forms
+  onsole.log('Google Form submitted!');
+  // Add a submit event listener to the Google Form
+  googleForm.addEventListener('submit', function () {
+    // Handle the form submission here
+    console.log('Google Form submitted!');
+    //alert('Google Form submitted!');
+    
+    // You can perform additional actions or send data to your server
+  });
+});
+
+	</script>
+</body>
+</html>
